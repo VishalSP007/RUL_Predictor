@@ -1,0 +1,14 @@
+__pycache__/
+*.pkl
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.DS_Store
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Model cache
+*.log
