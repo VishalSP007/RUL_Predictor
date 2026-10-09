@@ -2,6 +2,8 @@ import streamlit as st
 import joblib
 import json
 import pandas as pd
+import numpy as np
+import seaborn as sns
 
 # Load model and features
 model = joblib.load("rul_model.pkl")
@@ -17,7 +19,7 @@ inputs = {}
 for feat in features:
     inputs[feat] = st.number_input(f"{feat}", value=0.0)
 
-# Predict button
+
 if st.button("Predict RUL"):
     X = pd.DataFrame([inputs])
     rul_pred = model.predict(X)[0]
